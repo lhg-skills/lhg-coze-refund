@@ -2,7 +2,7 @@
 slug: lhg-coze-refund
 display_name: 扣子会员退款助手
 description: 扣子(Coze)会员退款 SOP：登录态检查→订阅管理页查会员状态→决策树（留用到期/申请退款）→支付记录点申请退款→用户确认后提交→四项核验。含完整点击路径、宿主能力需求与人机分工，实测走通。
-version: 1.1.0
+version: 1.2.0
 author: 刘洪光
 license: MIT
 ---

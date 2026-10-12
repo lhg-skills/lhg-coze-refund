@@ -15,6 +15,12 @@
 npx skills add lhg-skills/lhg-coze-refund
 ```
 
+**转发给朋友的一句话**（复制给他的 agent 即可，WorkBuddy / Claude Code / Codex / Cursor 等通用）：
+
+> 帮我安装并运行这个技能：https://github.com/lhg-skills/lhg-coze-refund （可以先 `npx skills add lhg-skills/lhg-coze-refund`，装不上就直接克隆仓库到你的技能目录），然后按技能里的 SOP 帮我退掉扣子 coze.cn 的付费会员。中途扫码登录和最终确认退款时停下来等我。
+
+注意：扫码登录和最终确认退款必须由用户本人完成（agent 不碰密码不读短信）；账号需存在付费订单，免费版会如实终止。
+
 - 扣子/Coze：扣子编程 → 导入项目 → 本地上传本仓库 zip（导入后生成 `.skill` 后缀，不要只改扩展名）
 - Trae：设置 → 技能 → 上传技能（国区版路径 `~/.trae-cn/skills/`）
 - 豆包工作 / Workbuddy：按各平台技能导入流程上传 zip

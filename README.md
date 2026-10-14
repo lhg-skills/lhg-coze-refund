@@ -2,6 +2,14 @@
 
 **Coze Membership Refund SOP** — 帮用户退掉扣子（Coze 国内版）的付费会员、拿回剩余价值。精确到每次点击的路径：登录态检查 → 订阅管理页查会员状态 → 决策树（留用到期 / 申请退款）→ 支付记录点「申请退款」→ 用户确认后提交 → 四项核验。全流程 2026-10-12 实测走通（个人高阶版连续包年，申请 ¥869 实到 ¥867.10）。
 
+## 发给 Agent 的安装话术（推荐）
+
+复制下面整段话，发给你的 Agent（豆包 / WorkBuddy / Claude Code / Codex / Cursor 等）：
+
+> 请帮我安装 Skill「lhg-coze-refund」：先从 Gitee 上 lhg-skills 组织下的 lhg-coze-refund 仓库下载；如果 Gitee 无法访问或下载失败，改从 GitHub 上 lhg-skills 组织下的同名仓库下载。按当前 Agent 的规范安装其中的 Skill，优先全局安装，保留完整目录和依赖。请直接执行，完成后验证是否安装成功，告诉我实际使用的来源、安装的版本号以及如何调用；遇到访问或安装限制请说明具体原因。中途扫码登录和最终确认退款时停下来等我。
+
+**怎么算装好了**：Agent 能在已安装的 Skill 里看到 `lhg-coze-refund`，并报出版本号（与仓库 `manifest.yaml` 的 `version` 一致）。只是打开了仓库网页不算安装。
+
 ## 为什么你之前找不到退款入口
 
 1. **藏得深**：入口不在会员中心首页，而在 订阅管理 → 套餐管理 → 支付记录 → 订单行操作列，四层嵌套。
@@ -15,9 +23,7 @@
 npx skills add lhg-skills/lhg-coze-refund
 ```
 
-**转发给朋友的一句话**（复制给他的 agent 即可，WorkBuddy / Claude Code / Codex / Cursor 等通用）：
-
-> 帮我安装并运行这个技能：https://github.com/lhg-skills/lhg-coze-refund （可以先 `npx skills add lhg-skills/lhg-coze-refund`，装不上就直接克隆仓库到你的技能目录），然后按技能里的 SOP 帮我退掉扣子 coze.cn 的付费会员。中途扫码登录和最终确认退款时停下来等我。
+**转发给朋友**：直接复制上面「发给 Agent 的安装话术」；装好后再对 Agent 说：「用 lhg-coze-refund 帮我退掉扣子 coze.cn 的付费会员，中途扫码登录和最终确认退款时停下来等我。」
 
 注意：扫码登录和最终确认退款必须由用户本人完成（agent 不碰密码不读短信）；账号需存在付费订单，免费版会如实终止。
 
